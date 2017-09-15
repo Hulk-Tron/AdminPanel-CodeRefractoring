@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="coderefractoring">
+<html ng-app="PMT-AdminPanel">
   <head>
     <meta charset="utf-8">
     <title>Paymytuition | Admin Panel</title>
@@ -14,25 +14,119 @@
     <!-- endbuild -->
 
     <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
+    type="text/css"/>
+<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+<link id="ng_load_plugins_before"/>
+<link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="assets/layouts/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link href="assets/layouts/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<link href="assets/layouts/layout/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.0/css/angular-datatables.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+<link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+<link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css">
+<link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.min.css">
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="bower_components/ng-tags-input/ng-tags-input.min.css"/> -->
+<link rel="stylesheet" type="text/css" href="assets/apps/css/app.css"/>
+<link rel="stylesheet" type="text/css" href="bower_components/angular-xeditable/dist/css/xeditable.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.0/plugins/bootstrap/datatables.bootstrap.min.css"/>
+
     <!-- inject:css -->
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="page-on-load"
+  ng-class="{'page-content-white': settings.layout.pageContentWhite,'page-container-bg-solid': settings.layout.pageBodySolid, 'page-sidebar-closed': settings.layout.pageSidebarClosed, 'page-full-width':settings.layout.full_width,'page-header-fixed':settings.layout.is_authenticated,'login':settings.layout.is_authenticated != true,'page-sidebar-closed-hide-logo':settings.layout.is_authenticated}">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
+<!-- BEGIN PAGE SPINNER -->
+<div ng-spinner-bar class="page-spinner-bar">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+</div>
+<!-- END PAGE SPINNER -->
+
+<!-- BEGIN HEADER -->
+<div ng-if="settings.is_authenticated" data-ng-include="'tpl/header.html'" data-ng-controller="HeaderController"
+     class="page-header navbar navbar-fixed-top"></div>
+<!-- END HEADER -->
+<div class="clearfix"></div>
+
+<div ng-if="!settings.is_authenticated" ui-view></div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container" ng-if="settings.is_authenticated">
+    <!-- BEGIN SIDEBAR -->
+    <div ng-if="settings.is_authenticated" data-ng-include="'tpl/sidebar.html'" data-ng-controller="SidebarController"
+         class="page-sidebar-wrapper"></div>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN ACTUAL CONTENT -->
+            <div ui-view class="fade-in-up"></div>
+            <!-- END ACTUAL CONTENT -->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div ng-if="settings.is_authenticated" data-ng-include="'tpl/footer.html'" data-ng-controller="FooterController"
+     class="page-footer"></div>
 
     <!-- build:js(src) scripts/vendor.js -->
+
+    
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
+<script src="bower_components/satellizer/dist/satellizer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.0/angular-datatables.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.0/plugins/bootstrap/angular-datatables.bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/angular-sanitize.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/angular-touch.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/plugins/angular-ui-router.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/plugins/ocLazyLoad.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/global/plugins/angularjs/plugins/ui-bootstrap-tpls.min.js?version=3.2" type="text/javascript"></script>
+
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js?version=3.2"></script>
+<script src="bower_components/angular-ui-select/dist/select.js?version=3.2"></script>
+<script src="bower_components/angular-ui-notification/dist/angular-ui-notification.min.js?version=3.2"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js?version=3.2"></script>
+<script src="bower_components/angular-xeditable/dist/js/xeditable.js?version=3.2"></script>
+<script type="text/javascript" src="bower_components/tinymce/tinymce.js?version=3.2"></script>
+<script type="text/javascript" src="bower_components/angular-ui-tinymce/src/tinymce.js?version=3.2"></script>
+<script src="bower_components/ng-tags-input/ng-tags-input.min.js?version=3.2"></script>
+<script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js?version=3.2"></script>
+<script src="bower_components/checklist-model/checklist-model.js?version=3.2"></script>
+<script src="js/scripts/ng-file-upload-shim.js?version=3.2"></script>
+<script src="js/scripts/ng-file-upload.js?version=3.2"></script>
+<script src="bower_components/angularUtils-pagination/dirPagination.js?version=3.2"></script>
+<script src="bower_components/ng-sweet-alert/ng-sweet-alert.js?version=3.2"></script>
+<script src="js/scripts/smart-table.debug.js?version=3.2"></script>
+<script src="https://cdn.rawgit.com/TheSharpieOne/angular-validation-match/22c809df/dist/angular-validation-match.js"></script>
+<script src="assets/global/scripts/app.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/layouts/layout/scripts/layout.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/layouts/global/scripts/quick-sidebar.min.js?version=3.2" type="text/javascript"></script>
+<script src="assets/layouts/layout/scripts/demo.min.js?version=3.2" type="text/javascript"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <script src="app/modules/Authentication/authentication.module.js"></script>
+    <script src="app/modules/Authentication/login/login.module.js"></script>
+    
     <!-- inject:js -->
     <!-- js files will be automatically insert here -->
     <!-- endinject -->

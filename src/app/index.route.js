@@ -2,20 +2,23 @@
   'use strict';
 
   angular
-    .module('coderefractoring')
+    .module('PMT-AdminPanel')
     .config(routerConfig);
 
   /** @ngInject */
-  function routerConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      });
+  function routerConfig($stateProvider, $urlRouterProvider,$authProvider, API) {
+    $authProvider.loginUrl = API.auth_url;
+    $authProvider.tokenName = 'access_token';
 
-    $urlRouterProvider.otherwise('/');
+    // $stateProvider
+    //   // .state('home', {
+    //   //   url: '/',
+    //   //   templateUrl: 'app/main/main.html',
+    //   //   controller: 'MainController',
+    //   //   controllerAs: 'main'
+    //   // });
+
+    // $urlRouterProvider.otherwise('/login');
   }
 
 })();

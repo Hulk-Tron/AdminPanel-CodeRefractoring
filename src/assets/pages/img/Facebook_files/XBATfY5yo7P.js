@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["9R2gZ"]); }
+
+__d('getContextualLayerCursorOffset',[],(function a(b,c,d,e,f,g){'use strict';function h(i,j,k){var l=i.getOrientation(),m=l.getPosition(),n=l.getAlignment(),o=i.getContent().getBoundingClientRect(),p=i.getContext().getBoundingClientRect(),q=j-p.left,r=k-p.top;switch(n){case 'left':q-=o.width;break;case 'center':q-=p.width*.5;break;case 'right':q-=p.width-o.width;break;default:throw new Error('invalid alignment');}switch(m){case 'above':r*=-1;break;case 'left':q+=o.width;r-=o.height*.5;break;case 'right':q-=o.width;r-=o.height*.5;break;case 'below':r-=p.height;break;default:throw new Error('invalid position');}return {offsetX:q,offsetY:r};}f.exports=h;}),null);
+__d("XDynamicInstantAdsAsyncPageShopsGKController",["XController"],(function a(b,c,d,e,f,g){f.exports=c("XController").create("\/ads\/dia\/page_shops\/",{});}),null);

@@ -10,8 +10,8 @@ var $ = require('gulp-load-plugins')({
 
 gulp.task('partials', ['markups'], function () {
   return gulp.src([
-    path.join(conf.paths.src, '/app/**/*.html'),
-    path.join(conf.paths.tmp, '/serve/app/**/*.html')
+    path.join(conf.paths.src, '/app/**/**/*.html'),
+    path.join(conf.paths.tmp, '/serve/app/**/**/*.html')
   ])
     .pipe($.htmlmin({
       removeEmptyAttributes: true,
@@ -20,7 +20,7 @@ gulp.task('partials', ['markups'], function () {
       collapseWhitespace: true
     }))
     .pipe($.angularTemplatecache('templateCacheHtml.js', {
-      module: 'coderefractoring',
+      module: 'PMT-AdminPanel',
       root: 'app'
     }))
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));

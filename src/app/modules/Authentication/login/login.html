@@ -1,0 +1,37 @@
+
+<!-- BEGIN LOGO -->
+<div class="logo">
+    <a href="/">
+        <img src="assets/layouts/layout/img/top_logo.png" alt=""/> </a>
+</div>
+<!-- END LOGO -->
+
+<!-- LOGIN PAGE CONTENT  -->
+<div class="content">
+    <!-- BEGIN LOGIN FORM -->
+    <h3 class="form-title font-dark">Sign In</h3>
+    <div class="alert alert-danger login-error display-hide">
+        <button class="close" data-close="alert"></button>
+        <span> </span>
+    </div>
+    <div class="form-group">
+        <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+        <label class="control-label visible-ie8 visible-ie9">Username</label>
+        <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off"
+               placeholder="Username" name="username" id="username" ng-model="login.username"/></div>
+    <div class="form-group">
+    <label class="control-label visible-ie8 visible-ie9">Password</label>
+    <input ng-model="login.password" class="form-control form-control-solid placeholder-no-fix" ng-keyup="$event.keyCode == 13 ? login.loginAdmin(login) : null" type="password" autocomplete="off" placeholder="Password" name="password" id="password"/></div>
+    <input type="hidden" name="grant_type" id="grant_type" value="password">
+    <div class="form-actions">
+    <button type="button" class="btn green uppercase" enterKeyPressEvent="login.loginAdmin(login)" ng-click="login.loginAdmin(login)">Login</button>
+    </div>
+
+</div>
+
+
+<!-- LOGIN PAGE CONTENT  -->
+
+<!-- COPYRIGHT ELEMENT  -->
+<div class="copyright"> 2016 &copy; MTFX</div>
+<!-- COPYRIGHT ELEMENT  -->

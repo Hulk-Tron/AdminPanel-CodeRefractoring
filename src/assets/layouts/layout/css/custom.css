@@ -1,0 +1,398 @@
+/* here you can put your own css to customize and override the theme */
+
+.td-logo{
+    float: left;
+    width: 40px;
+    height: 40px;
+    padding: 0px 5px;
+    vertical-align: middle;
+}
+.td-logo img{
+    max-width: 100%;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    vertical-align: middle;
+}
+.tile-footer{
+    position: absolute;
+    /* display: inline-block; */
+    /* width: 100%; */
+    bottom: 32px;
+    color: #fff;
+    width: 90%;
+    padding: 0px 20px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    background-color: #2b3643;
+    border-color: #1f2831;
+    cursor: default;
+}
+.half-radius{
+    border-radius: 50px !important;
+}
+.dropdown-menu.in-table{
+    left:-150px !important;
+}
+.dropdown-menu.in-table:before {
+    position: absolute;
+    top: -8px;
+    right: 7px;
+    left: auto;
+    display: inline-block!important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #e0e0e0;
+    border-left: 8px solid transparent;
+    content: '';
+}
+.dropdown-menu.in-table:after {
+    right: 8px;
+    left: auto;
+}
+
+.page-sidebar .page-sidebar-menu>li.active.open>a, .page-sidebar .page-sidebar-menu>li.active>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active.open>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.active>a {
+    background: #f8a926;
+    border-top-color: transparent;
+    color: #fff;
+}
+
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle .badge.badge-default {
+    background-color: #f8a926;
+    color: #fff;
+}
+.tabbable-line>.nav-tabs>li.open, .tabbable-line>.nav-tabs>li:hover {
+    background: 0 0;
+    border-bottom: 4px solid #f8a926;
+}
+.tabbable-line>.nav-tabs>li.active {
+    background: 0 0;
+    border-bottom: 4px solid #f8a926;
+    position: relative;
+}
+
+.font-golden {
+    color: #f8a926!important;
+}
+.color-golden{
+    color: #f8a926;
+}
+.badge-golden{
+    background-color: #f8a926;
+}
+
+.btn-primary {
+    color: #364150;
+    background-color: #f8a926;
+    border-color: #e09820;
+}
+.btn-primary.active, .btn-primary:active, .btn-primary:hover, .open>.btn-primary.dropdown-toggle {
+    color: #384454;
+    background-color: #ffaf2a;
+    border-color: #e09820;
+}
+.btn.btn-outline.golden {
+    border-color: #f8a926;
+    color: #364150;
+    background: 0 0;
+}
+.popup-button{
+    background: none;
+    font-size: 14px;
+    padding: 0px 8px;
+    margin-left: 5px;
+    float: right;
+    /* text-indent: 3px; */
+    vertical-align: middle;
+    margin-top: -4px;
+    /* width: 20px; */
+    /* height: 5px; */
+    border: none;
+    opacity: .2;
+}
+.popup-button:hover{
+
+    opacity: 0.50;
+}
+.form-group.form-md-line-input {
+    position: relative;
+    margin: 0 0 15px;
+    padding-top: 20px;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    text-decoration: none;
+    color: #a06502;
+    background-color: #f8a926;
+}
+.dropdown-menu>li>a:focus > i, .dropdown-menu>li>a:hover > i {
+    color: #a06502;
+}
+.university-querytab ul{
+    margin:auto;
+    border-bottom:1px solid #eaeaea; 
+}
+.university-querytab ul li a{
+    display: block;
+    text-decoration:none;
+    padding: 10px 5px;
+}
+.university-querytab ul li a.active{
+    border-bottom:4px solid #00c7f7;
+}
+.ManageUni-Tab-Head .CancelBtn{
+    float:right;
+}
+.ManageUni-Tab-Head .CancelBtn a {
+    color: #e72922 !important;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -6px !important;
+}
+.University-PaymentMethods{
+    margin-top:30px;
+}
+.University-PaymentMethods .ManagePayTitle{
+    color: #757575;
+    font-weight: 700;
+    font-size: 13px;
+}
+.university-paymenttypes .paytype-wrapper form label{
+    display:inline-block;
+    color: #757575;
+    font-weight: 700;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.university-paymenttypes li{
+    padding:5px 10px;
+}
+.paytype-wrapper input[type=checkbox] {
+  display: none;
+}
+.paytype-wrapper .checkbox label:before {
+  border-radius: 3px;
+}
+.paytype-wrapper input[type=checkbox] + label:before {
+      content: "";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 21px;
+    background: white;
+    padding: 0px 9px;
+    margin-right: 15px;
+    border:2px solid #00c7f7;
+}
+.paytype-wrapper input[type=checkbox]:checked + label:before {
+      content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 21px;
+    background: #00c7f7;
+    padding: 0px 4px;
+    margin-right: 15px;
+}
+.tabbable-line>.nav-tabs>li.active{
+    border-bottom:4px solid #00c7f7 !important;
+}
+.portlet > .portlet-title > .nav-tabs{
+    float:left;
+}
+.clearfix{
+    clear:both;
+}
+.university-selectMethod{
+    background:#f0f0f0;
+}
+.university-selectMethod .selectMethod-header{
+    padding:10px;
+}
+.university-selectMethod .selectMethod-header table tbody tr td{
+    padding-right:5px;
+}
+.manageuni-single-footer{
+    background:#ebebeb;
+    padding:10px;
+}
+.manageuni-single-footer .btn, .blue-btn{
+    background: #0c58cf;
+    display: block;
+    margin: auto;
+    border: 1px solid #0c58cf;
+    color: white;
+    padding: 10px 20px;
+}
+.university-addCountrybtn button{
+    background: #0c58cf;
+    display: block;
+    margin: auto;
+    border: 1px solid #0c58cf;
+    color: white;
+    padding: 10px 20px;
+}
+.university-addCountrybtn{
+    background: white;
+    padding-top: 20px;
+    float: right;
+}
+.ManageUni-Tab-Head li a {
+    font-weight:600;
+    color:black !important;
+    text-transform:uppercase;
+}
+.nopadding{
+    padding:0px !important;
+}
+.Tabs-Wrappper{
+    padding:0px 15px;
+}
+.university-selectcountry-dropdown{
+    padding:0px 0px 0px 15px;
+}
+.nopaddleft{
+    padding-left:0px;
+}
+.nopaddright{
+    padding-right:0px;
+}
+.insertedPayWrapper{
+    border: 1px solid #c9c9c9;
+    border-radius: 4px !important;
+    padding: 5px;
+    color: #69c9e4;
+    font-weight: bold;
+    background: white;
+}
+.insertedPayWrapper span{
+    color: #e72922;
+    font-size: 16px;
+    margin-left: 2px;
+    cursor:pointer;
+}
+.Paymethod-SelectBox{
+    min-width:100px;
+}
+.Paymethod-SelectBox select{
+    border-radius: 3px !important;
+    height: 34px;
+    padding: 5px;
+    border: 2px solid #e2e0e0;
+}
+.save-status p{
+    color: green;
+    font-weight: bold;
+}
+.error-status p{
+        color: red;
+    font-weight: bold;
+    padding-right: 25px;
+}
+.have-top-space{
+    margin-top:45px;
+}
+.managepay-listing-header, .managepay-listing-amount{
+    display: inline-block;
+    font-size: 14px;
+    color: #8c8c83;
+}
+.managepay-listing-cntrycode{
+    display: inline-block;
+    background: #f6f5f5;
+    padding:3px 8px;
+    font-size: 14px;
+    color: #8c8c83;
+    font-weight: 600;
+}
+.managepay-listing-cntrycode.success{
+    border-bottom: 3px solid #6abc6d;
+}
+.managepay-listing-cntrycode.danger{
+border-bottom:3px solid #e51812;
+}
+.managepay-listing-body{
+    margin-top:5px;
+}
+.managepay-listing-column.student .managepay-listing-header span{
+    font-size:12px;
+}
+.managepay-listing-body.primary{
+    color:#407cd9;
+    font-weight:600;
+}
+.managepay-listing-column{
+    margin:10px 0px 0px;
+}
+.x-y-center{
+    vertical-align:middle !important;
+    text-align:center;
+}
+.x-y-center .insertedPayWrapper{
+    padding:5px 10px;
+}
+.shaddedRow{
+    background:#fefbdf;
+}
+.total-amount{
+    color: black;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.badge{
+    border-radius: 3px !important;
+    font-size: 13px !important;
+    padding: 3px 5px;
+    font-weight: 600;
+}
+.badge.badge-orange{
+    background: #fa8b00;
+}
+.badge.badge-blue{
+    background:#1364f5;
+}
+.uni-posting{
+    padding: 5px;
+    border-radius: 5px !important;
+    font-weight: 600;
+}
+.uni-posting.unposted{
+    border: 1px dotted #ffb554;
+    color: #ffb554;
+}
+.uni-posting.posted{
+    border: 1px dotted #54b358;
+    color: #54b358;
+}
+.text-paired.uniposted-modal{
+    font-size: 15px;
+    font-weight: 600;
+}
+.text-paired.uniposted-modal .second-pair{
+    color:#17aff4;
+}
+.table-centered{
+    display:table;
+    margin:0 auto;
+}
+#PostedUni-ViewDetailModal .modal-header{
+    background:#ebebeb;
+}
+@media screen and (min-width:767px){
+    .University-PaymentMethods .ManagePayCheckbox{
+        margin-top:-15px;
+    }
+}
+@media screen and (max-width:766px){
+    .nopaddright{
+        padding-right:15px;
+    }
+    .ManageUni-Tab-Head li{
+        width:100%;
+        text-align:center;
+    }
+    .university-selectMethod{
+        margin:10px 0px 0px 15px;
+    }
+}

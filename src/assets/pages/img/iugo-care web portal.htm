@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:3000/#/app/dashboard -->
+<html ng-app="iugoPortal" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title>iugo-care web portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="./iugo-care web portal_files/angular-toastr.css">
+    <link rel="stylesheet" href="./iugo-care web portal_files/animate.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <link href="./iugo-care web portal_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./iugo-care web portal_files/simple-sidebar.css" rel="stylesheet">
+
+
+    <!--<link href="app/css/font-awesome/font-awesome.min.css" rel="stylesheet">-->
+    <link href="./iugo-care web portal_files/select2.min.css" rel="stylesheet">
+    <script src="./iugo-care web portal_files/jquery-1.11.2.min.js"></script>
+    <script src="./iugo-care web portal_files/bootstrap.min.js"></script>
+    <script src="./iugo-care web portal_files/select2.min.js"></script>
+    <script src="./iugo-care web portal_files/sidebar_menu.js"></script>
+    <link href="./iugo-care web portal_files/styles.css" rel="stylesheet">
+
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./iugo-care web portal_files/index.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body><script type="text/javascript" id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.2.9.12.js'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./iugo-care web portal_files/browser-sync-client.2.9.12.js"></script>
+
+  <!-- uiView: --><div ui-view="" class="ng-scope">
+
+                                         <!--HEADER WITH LOGO TEMPLATE -->
+                                         <section id="header" class="ng-scope">
+                                           <div class="section_header">
+                                             <div class="inner_logo">
+                                               <a class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"><img width="33" src="./iugo-care web portal_files/white-logo.jpg"></a>
+                                               <!--<a class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"><img width="47" src="images/inner_logo.jpg" /></a>-->
+                                             </div>
+                                           </div>
+                                           <div class="navbar navbar-inverse navbar-fixed-top">
+                                             <div class="container" style="width:100%;">
+                                               <div class="navbar-header">
+                                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                                   <span class="icon-bar"></span>
+                                                   <span class="icon-bar"></span>
+                                                   <span class="icon-bar"></span>
+                                                 </button>
+                                                 <div class="inner_logo"> <a class="navbar-brand collapse in" data-toggle="collapse" id="menu-toggle-2"><img width="33" src="./iugo-care web portal_files/white-logo.jpg"></a>
+                                                 </div>
+                                               </div>
+                                               <div class="collapse navbar-collapse">
+                                                 <ul class="nav navbar-nav">
+                                                   <li>
+                                                     <a href="http://localhost:3000/#"><span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/Menu_Normal_Solid.png" width="32">
+                                                  </span> <span class="title">Dashboard</span></a>
+                                                   </li>
+                                                   <li class="active">
+                                                     <a href="http://localhost:3000/#"><span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/Patients_Active_Solid.png" width="32"></span><span class="title">Patients</span></a>
+                                                   </li>
+                                                   <li>
+                                                     <a href="http://localhost:3000/#"><span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/MedicalTeam_Normal_Solid.png" width="32"></span> <span class="title">Appointments</span></a>
+                                                   </li>
+                                                   <li>
+                                                     <a href="http://localhost:3000/#"> <span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/Messages_Normal_Solid.png" width="32"></span><span class="title">Resources</span></a>
+                                                   </li>
+                                                 </ul>
+                                               </div>
+                                             </div>
+                                           </div>
+                                         </section>
+                                        <!--HEADER WITH LOGO TEMPLATE -->
+
+
+                                         <div id="wrapper" class="toggled-2 ng-scope">
+                                           <!-- Sidebar -->
+                                           <div id="sidebar-wrapper">
+                                             <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+                                               <li>
+                                                 <a href="http://localhost:3000/#"><span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/Menu_Normal_Solid.png" width="32">
+                                                  </span> <span class="title">Dashboard</span></a>
+                                               </li>
+                                               <li class="active">
+                                                 <a href="http://localhost:3000/#"><span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/Patients_Active_Solid.png" width="32"></span><span class="title">Patients</span></a>
+                                               </li>
+
+                                               <li>
+                                                 <a href="http://localhost:3000/#"><span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/MedicalTeam_Normal_Solid.png" width="32"></span> <span class="title">Appointments</span></a>
+                                               </li>
+
+                                               <li>
+                                                 <a href="http://localhost:3000/#"> <span class="fa-stack fa-lg pull-left"><img src="./iugo-care web portal_files/Messages_Normal_Solid.png" width="32"></span><span class="title">Resources</span></a>
+                                               </li>
+
+                                             </ul>
+                                           </div>
+
+
+
+
+                                           <!--CHILD VIEW INJECTION START-->
+                                           <!-- uiView: --><div ui-view="" class="ng-scope"><!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid xyz">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 paddLR sidebar-patients">
+
+        <!--SEARCH BAR INJECT -->
+        <div ng-include="" src="&#39;../layouts/search_panel/search_panel.html&#39;"></div>
+        <!--SEARCH BAR INJECT -->
+
+
+      </div>
+
+      <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12 paddR boxes-outer" id="boxes-outer">
+
+        <!--MAIN TABS -->
+        <div class="col-sm-12">
+          <div class="boxes_content nav nav-tabs">
+
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 paddR">
+              <div class="tab">
+                <div class="boxes">
+                  <a href="javascript:void(0)" class="tablinks active" onclick="openCity(event, &#39;flagged&#39;)">
+                    <h4>Flagged:</h4>
+                    <span>*Flagged by iUGO</span>
+                    <div class="number">13</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 paddR">
+              <div class="boxes">
+                <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, &#39;following&#39;)">
+                  <h4>Following:</h4>
+                  <span>*Followed by staff</span>
+                  <div class="number">56</div>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 paddR">
+              <div class="boxes">
+                <a href="javascript:void(0)" class="tablinks" onclick=" openCity(event, &#39;urgentalert&#39;)">
+                  <h4>Urgent Alert:</h4>
+                  <span>*Alert for At Risk Patients</span>
+                  <div class="number">13</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 paddR">
+              <div class="boxes">
+                <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, &#39;atrisk&#39;)">
+                  <h4>At Risk:</h4>
+                  <span>*Patients marked as At Risk</span>
+                  <div class="number">56</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 paddLR search-patients-box">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <input type="text" id="search-table" placeholder="Search" class="form-control" aria-label="Search">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <select id="by-phy">
+                  <option value="1">Physician</option>
+                  <option value="2">Physician2</option>
+                  <option value="3">Physician3</option>
+
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <input type="submit" class="btn btn-default btn-search" value="Search">
+            </div>
+          </div>
+        </div>
+        <!--MAIN TABS -->
+
+        <div class="patients-list tabcontent" id="flagged" style="display:block;">
+
+          <h1 class="page-heading">
+            Flagged Patients <br>
+            <span>Patients flagged by iUGO Care.</span>
+          </h1>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th class="icons">Status</th>
+                <th>Flagged Reading</th>
+                <th>Time Flagged</th>
+                <th class="icons">Follow</th>
+                <th class="icons">Flagged</th>
+                <th class="icons">At Risk</th>
+                <th class="icons">Note</th>
+                <!--<th><a href="#" class="clearAll">Clear All</a>&nbsp;&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i></th>-->
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Elevated.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="patients-list tabcontent" id="following">
+
+          <h1 class="page-heading">
+            Following Patients <br>
+            <span>Followed by staff.</span>
+          </h1>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th class="icons">Status</th>
+                <th>Flagged Reading</th>
+                <th>Time Flagged</th>
+                <th class="icons">Follow</th>
+                <th class="icons">Flagged</th>
+                <th class="icons">At Risk</th>
+                <th class="icons">Note</th>
+                <!--<th><a href="#" class="clearAll">Clear All</a>&nbsp;&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i></th>-->
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Elevated.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="patients-list tabcontent" id="urgentalert">
+
+          <h1 class="page-heading">
+            Urgent Alert: <br>
+            <span>*Alert for At Risk Patients</span>
+          </h1>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th class="icons">Status</th>
+                <th>Flagged Reading</th>
+                <th>Time Flagged</th>
+                <th class="icons">Follow</th>
+                <th class="icons">Flagged</th>
+                <th class="icons">At Risk</th>
+                <th class="icons">Note</th>
+                <!--<th><a href="#" class="clearAll">Clear All</a>&nbsp;&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i></th>-->
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Elevated.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="patients-list tabcontent" id="atrisk">
+
+          <h1 class="page-heading">
+            At Risk:<br>
+            <span>*Patients marked as At Risk</span>
+          </h1>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th class="icons">Status</th>
+                <th>Flagged Reading</th>
+                <th>Time Flagged</th>
+                <th class="icons">Follow</th>
+                <th class="icons">Flagged</th>
+                <th class="icons">At Risk</th>
+                <th class="icons">Note</th>
+                <!--<th><a href="#" class="clearAll">Clear All</a>&nbsp;&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i></th>-->
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Elevated.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/AtRisk.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img width="32" src="./iugo-care web portal_files/Stable.png"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>       <tr>
+                <td>
+                  <img src="./iugo-care web portal_files/circled-image.jpg">
+                  <span>First LastName</span><span class="phone">778-703-488</span>
+                </td>
+                <td class="icons"><img src="./iugo-care web portal_files/yellow-icon_03.jpg"></td>
+                <td><b>BP:</b> 130/80 <b>P:</b>84</td>
+                <td><b>9:00 am, Today</b></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Follow_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/Flagged_Solid.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AtRisk_Line.png"></td>
+                <td class="icons"><img width="22" src="./iugo-care web portal_files/AddNotetoPatientProfile_Grey.png"></td>
+                <!-- <td><a href="#" class="btn_viewall">View Patient</a>&nbsp; <a href="#" class="cross"><i class="fa fa-times" aria-hidden="true"></i>
+</a></td>-->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var carecircleData = [{id:'00004D6E-94F7-497F-A316-C13BE2C6D785', text:'Dr. Al Carlson'},{id:'E5B0DDF8-581A-4012-9459-57903FE1F9AA', text:'Dr. Domingo Johnson'},{id:'0F85943E-383B-45D3-BB16-F67A641AA011', text:'Dr. Johnathan Fuller'},{id:'00728751-9162-45DA-B5EF-BF5947DAD6DE', text:'Dr. Daniel Simpson'},{id:'289D799F-978A-4E9C-9241-56D04A0DBF92', text:'Dr. Wendell James'},{id:'3120E804-094C-4D22-B57A-FDF2562DB99E', text:'  iUGO Demo'},{id:'80583224-CDC8-42DF-8A2D-62F7CD71013C', text:'Dr. Jack Ellis'},{id:'8C82013F-168E-4F17-B92C-9D47F3B0E703', text:'Dr. Julian Vaughn'},{id:'D1E5E941-0F6C-4FED-A5BD-185608CB46B6', text:'Dr. Percy Howell'},{id:'E43F8EBB-70C3-441A-B232-6B77E875074F', text:'Dr. Walter Mendez'},{id:'1716F4E9-6EB4-4AC8-B356-7A8621D62575', text:'Mr. Giancarlo Delio'}];
+
+  $(document).ready(function(){
+    $('#IUGO-NEW-PATIENT-CARECIRCLE').select2({
+      tags:false,
+      placeholder: 'add members',
+      data:carecircleData
+    });
+  });
+
+  $('.btnNext').click(function(){
+
+    $('.modal-content .nav-tabs > .active').next('li').find('a').trigger('click');
+
+    var target = $(".modal-content ul#new_patient_tabs li.active").find('a').attr('href');// activated tab
+    console.log(target);
+
+    if (target=="#CareCircle"){
+      $("#nextButton").css('display', 'none');
+      $("#submitButton").css('display', 'inline-block');
+    }else if(target=="#PatientInformation"){
+      $("#prevButton").css('display', 'none');
+      $("#submitButton").css('display', 'none');
+      $('.required-footer').css('display', 'inline-block');
+      $("#cancelButton").css('float', 'none');
+
+    }else{
+
+      $('.required-footer').css('display', 'none')
+      $("#cancelButton").css('float', 'left');
+      $("#nextButton").css('display', 'inline-block');
+      $("#prevButton").css('display', 'inline-block');
+      $("#submitButton").css('display', 'none');
+
+    }
+
+  });
+
+  $('.btnPrevious').click(function(){
+    $('.modal-content .nav-tabs > .active').prev('li').find('a').trigger('click');
+
+    var target = $("ul#new_patient_tabs li.active").find('a').attr('href');// activated tab
+    console.log(target);
+    if (target=="#CareCircle"){
+      $("#nextButton").css('display', 'none');
+      $("#submitButton").css('display', 'inline-block');
+    }else if(target=="#PatientInformation"){
+      $("#prevButton").css('display', 'none');
+      $("#submitButton").css('display', 'none');
+      $('.required-footer').css('display', 'inline-block');
+      $("#cancelButton").css('float', 'none');
+
+    }else{
+      $("#nextButton").css('display', 'inline-block');
+      $("#prevButton").css('display', 'inline-block');
+      $("#submitButton").css('display', 'none');
+      $('.required-footer').css('display', 'none');
+      $("#cancelButton").css('float', 'left');
+
+    }
+  });
+  $(".sidebar-nav a").mouseover(function () {
+
+    var img1 = $(this).find('img').attr('src');
+    //console.log($(this).find('img').attr('src'));
+    var img2 = $(this).find('img').attr('src');
+
+    $(this).attr("src", img2);
+
+    $(this).next('.img2').attr("src",img1)
+  })
+    .mouseout(function () {
+      var img1 = $(this).attr("src");
+
+      var img2 = $(this).next('.img2').attr("src");
+
+      $(this).attr("src", img2);
+
+      $(this).next('.img2').attr("src",img1)
+    });
+
+
+  function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+</script>
+</div>
+                                           <!--CHILD VIEW INJECTION END -->
+
+
+
+
+
+                                         </div>
+</div>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./iugo-care web portal_files/jquery.js"></script>
+    <script src="./iugo-care web portal_files/angular.js"></script>
+    <script src="./iugo-care web portal_files/angular-animate.js"></script>
+    <script src="./iugo-care web portal_files/angular-cookies.js"></script>
+    <script src="./iugo-care web portal_files/angular-touch.js"></script>
+    <script src="./iugo-care web portal_files/angular-sanitize.js"></script>
+    <script src="./iugo-care web portal_files/angular-messages.js"></script>
+    <script src="./iugo-care web portal_files/angular-aria.js"></script>
+    <script src="./iugo-care web portal_files/angular-resource.js"></script>
+    <script src="./iugo-care web portal_files/angular-ui-router.js"></script>
+    <script src="./iugo-care web portal_files/ui-bootstrap-tpls.js"></script>
+    <script src="./iugo-care web portal_files/malarkey.min.js"></script>
+    <script src="./iugo-care web portal_files/angular-toastr.tpls.js"></script>
+    <script src="./iugo-care web portal_files/moment.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="./iugo-care web portal_files/index.module.js"></script>
+    <script src="./iugo-care web portal_files/webDevTec.service.js"></script>
+    <script src="./iugo-care web portal_files/SignUpController.js"></script>
+    <script src="./iugo-care web portal_files/navbar.directive.js"></script>
+    <script src="./iugo-care web portal_files/LoginVerificationController.js"></script>
+    <script src="./iugo-care web portal_files/LoginController.js"></script>
+    <script src="./iugo-care web portal_files/DashboardController.js"></script>
+    <script src="./iugo-care web portal_files/CreateMyAccountController.js"></script>
+    <script src="./iugo-care web portal_files/sidebar_menu.js"></script>
+    <script src="./iugo-care web portal_files/select2.min.js"></script>
+    <script src="./iugo-care web portal_files/npm.js"></script>
+    <script src="./iugo-care web portal_files/jquery-3.1.0.min.js"></script>
+    <script src="./iugo-care web portal_files/jquery-1.11.2.min.js"></script>
+    <script src="./iugo-care web portal_files/bootstrap.min.js"></script>
+    <script src="./iugo-care web portal_files/bootstrap.js"></script>
+    <script src="./iugo-care web portal_files/main.controller.js"></script>
+    <script src="./iugo-care web portal_files/index.run.js"></script>
+    <script src="./iugo-care web portal_files/index.route.js"></script>
+    <script src="./iugo-care web portal_files/index.constants.js"></script>
+    <script src="./iugo-care web portal_files/index.config.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  
+
+</body></html>

@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["BiPtf"]); }
+
+__d('JewelCountSideLoader',['invariant','CSS'],(function a(b,c,d,e,f,g,h){var i={},j={},k={},l={queueInstances:function m(n,o,p){i[n]={badge:o,root:p};},updateCountAndQueueArgs:function m(n,o,p){var q=j[n];if(q){q.updateCountAndArgs(p,o);return;}var r=i[n];r||h(0);k[n]={count:o,args:p};c('CSS').conditionClass(r.root,'hasNew',!!o);r.badge.setLegacyContent(o);return;},getOverwritesForJewel:function m(n){if(k[n.name])return k[n.name];j[n.name]=n;return null;}};f.exports=l;}),null);
+__d("XReactComposerPostToGroupLoggingODSController",["XController"],(function a(b,c,d,e,f,g){f.exports=c("XController").create("\/react_composer\/logging\/post_to_group\/ods\/",{event:{type:"String",required:true}});}),null);
