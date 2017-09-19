@@ -1,224 +1,98 @@
-<div class="page-sidebar-wrapper">
-    <div class="page-sidebar navbar-collapse collapse">
 
-        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"  data-slide-speed="200" style="padding-top: 20px">
-            <li class="sidebar-toggler-wrapper hide">
-                <div class="sidebar-toggler">
-                    <span></span>
-                </div>
-            </li>
-            <!-- END SIDEBAR TOGGLER BUTTON -->
+<div class="nav-side-menu">
+        <!-- <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i> -->
+      
+            <div class="menu-list">
+      
+                <ul id="menu-content" class="menu-content collapse out">
+                
+                    <!-- MANAGE UNIVERSITIES MODULE  -->
+                    <li  data-parent="#menu-content" data-toggle="collapse" data-target="#manageUniversitySubChirldren" class="collapsed active">
+                      <a href="#"><i class="fa fa-university"></i> Manage Universities <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="manageUniversitySubChirldren">
+                        <li ><a href="#/home/addUniversity">Add University</a></li>
+                        <li><a href="#/home/universitiesLists">List Universities</a></li>
+                        
+                    </ul>
+                   <!-- MANAGE UNIVERSITIES MODULE  -->
 
-            <li class="sidebar-search-wrapper">
-                <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-                <form class="sidebar-search" method="POST">
-                    <a href="javascript:;" class="remove">
-                        <i class="icon-close"></i>
-                    </a>
-                </form>
-                <!-- END RESPONSIVE QUICK SEARCH FORM -->
-            </li>
-                        <!--MANAGE UNIVERSITIES MODULE-->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-university" aria-hidden="true"></i>
-                    <span class="title">Manage Universities</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/add-university.html" class="nav-link ">
-                            <span class="title">Add University</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/university-list.html" class="nav-link ">
-                            <span class="title">List University</span>
-                        </a>
-                    </li>
+
+                   <!-- MANAGE PAYMENTS MODULE  -->
+                   <li  data-parent="#menu-content" data-toggle="collapse" data-target="#managePaymentsSubChirldren" class="collapsed ">
+                        <a href="#"><i class="fa fa-credit-card"></i> Manage Payments <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="managePaymentsSubChirldren">
+                          <li ><a href="#/home/addUniversity">Unfunded Payments</a></li>
+                          <li><a href="#/home/universitiesLists">Received Payments</a></li>
+                          <li><a href="#/home/universitiesLists">Posted Payments</a></li>                          
+                      </ul>
+                   <!-- MANAGE PAYMENTS MODULE  -->
+
+
+                   <!-- MANAGE SETTLEMENTS MODULE  -->
+                   <li data-toggle="collapse" data-target="#manageSettlementSubChirldren" class="collapsed ">
+                        <a href="#"><i class="fa fa-balance-scale"></i> Manage Settlements <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="manageSettlementSubChirldren">
+                          <li ><a href="#/home/addUniversity">Settlements</a></li>
+                          <li><a href="#/home/universitiesLists">Settlements Payments</a></li>
+                      </ul>
+                   <!-- MANAGE SETTLEMENTS MODULE  -->
+
+                   <!-- MANAGE CUSTOMERS MODULE  -->
+                   <li data-toggle="collapse" data-target="#manageCustomerSubChirldren" class="collapsed ">
+                        <a href="#"><i class="fa fa-user"></i> Manage Customers <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="manageCustomerSubChirldren">
+                          <li ><a href="#/home/addUniversity">Transactional History</a></li>
+                          <li><a href="#/home/universitiesLists">Complaince Reporting</a></li>
+                          <li><a href="#/home/universitiesLists">New Users</a></li>                          
+                      </ul>
+                   <!-- MANAGE CUSTOMERS MODULE  -->
+
+
+                   <!-- REFUND MANAGEMENT MODULE  -->
+                   <li data-toggle="collapse" data-target="#refundManagementSubChirldren" class="collapsed ">
+                        <a href="#"><i class="fa fa-refresh"></i> Refund Management <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="refundManagementSubChirldren">
+                          <li ><a href="#/home/addUniversity">Refund Batch List</a></li>
+                      </ul>
+                   <!-- REFUND MANAGEMENT MODULE  -->
+
+                   <!-- REPORTING MODULE  -->
+                   <li data-toggle="collapse" data-target="#reportingSubChirldren" class="collapsed ">
+                        <a href="#"><i class="fa fa-file"></i> Report <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="reportingSubChirldren">
+                          <li ><a href="#/home/addUniversity">Geoswift Report</a></li>
+                          <li ><a href="#/home/addUniversity">Transaction Report</a></li>
+                          <li ><a href="#/home/addUniversity">India Report</a></li>
+                          <li ><a href="#/home/addUniversity">Payment Summary Report</a></li>
+                          
+                          
+                      </ul>
+                   <!-- REPORTING MODULE  -->
+
+
+                   <!-- CONFIGURATION MODULE  -->
+                   <li data-toggle="collapse" data-target="#configurationSubChirldren" class="collapsed ">
+                        <a href="#"><i class="fa fa-cog"></i> Configuration <span class="arrow"></span></a>
+                      </li>
+                      <ul class="sub-menu collapse" id="configurationSubChirldren">
+                          <li ><a href="#/home/addUniversity">Currency Configuration</a></li>
+                          <li ><a href="#/home/addUniversity">Country Configuration</a></li>
+                          <li ><a href="#/home/addUniversity">Labels Configuration</a></li>
+                          <li ><a href="#/home/addUniversity">Feedback Configuration</a></li>
+                          <li ><a href="#/home/addUniversity">Program of study configuration</a></li>
+                          <li ><a href="#/home/addUniversity">User Manager configuration</a></li>
+                          <li ><a href="#/home/addUniversity">Email Template configuration</a></li>
+                          
+                          
+                      </ul>
+                   <!-- CONFIGURATION MODULE  -->
+
                 </ul>
-            </li>
-                                    <!--MANAGE UNIVERSITIES MODULE-->
-
-
-
-                                    <!--MANAGE PAYMENTS MODULE-->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-credit-card" aria-hidden="true"></i>
-                    <span class="title">Manage Payments</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/unfunded.html" class="nav-link ">
-                            <span class="title">Unfunded</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="#/Received.html" class="nav-link ">
-                            <span class="title">Received</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="#/Posted.html" class="nav-link ">
-                            <span class="title">Posted</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-                                    <!--MANAGE PAYMENTS MODULE-->
-
-
-                                    <!--MANAGE SETTLEMENTS MODULE -->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-balance-scale" aria-hidden="true"></i>
-                    <span class="title">Manage Settlements</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/Batch.html" class="nav-link ">
-                            <span class="title">Settlements</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/batch-payments.html" class="nav-link ">
-                            <span class="title">Settlement Payments</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-                                       <!--MANAGE SETTLEMENTS MODULE-->
-
-                                       <!--MANAGE CUSTOMERS MODULE-->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span class="title">Manage Customers</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/user-list.html" class="nav-link">
-                            <span class="title">Transactional History</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/compliance-reporting.html" class="nav-link">
-                            <span class="title">Compliance Reporting</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/new-user.html" class="nav-link">
-                            <span class="title">New Users</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-                                       <!--MANAGE CUSTOMERS MODULE-->
-
-                                       <!--REFUND MANAGEMENT MODULE-->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-refresh" aria-hidden="true"></i>
-                    <span class="title">Refund Management</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/refund.html" class="nav-link">
-                            <span class="title">Refund Batch List</span>
-                        </a>
-
-                    </li>
-                </ul>
-            </li>
-                                     <!--REFUND MANAGEMENT MODULE -->
-
-
-
-                                     <!--REPORT MODULE -->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-file" aria-hidden="true"></i>
-                    <span class="title">Report</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/geo-swift.html" class="nav-link">
-                            <span class="title">GeoSwift Report</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/transaction-report.html" class="nav-link">
-                            <span class="title">Transaction Report</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/india-report.html" class="nav-link">
-                            <span class="title">India Report</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/payment_summary.html" class="nav-link">
-                            <span class="title">Payment Summary Report</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>                            
-                                     <!--REPORT MODULE -->
-           
-                                  <!--CONFIGURATION MODULE -->
-            <li class="nav-item">
-                <a href="javascript:;" class="nav-link nav-toggle">
-                    <i class="fa fa-cog" aria-hidden="true"></i>
-                    <span class="title">Configuration</span>
-                    <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item">
-                        <a href="#/config-currency.html" class="nav-link">
-                            <span class="title">Currency</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/config-country.html" class="nav-link">
-                            <span class="title">Country</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/config-labels.html" class="nav-link">
-                            <span class="title">Labels</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/config-feedback.html" class="nav-link">
-                            <span class="title">Feedback</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/config-language.html" class="nav-link">
-                            <span class="title">Language</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/config-programOfStudy.html" class="nav-link">
-                            <span class="title">Program of study</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#/config-userManager.html" class="nav-link">
-                            <span class="title">User Manager</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-                                       <!--CONFIGURATION MODULE -->
-        </ul>
-        <!-- END SIDEBAR MENU -->
+         </div>
     </div>
-    <!-- END SIDEBAR -->
-</div>

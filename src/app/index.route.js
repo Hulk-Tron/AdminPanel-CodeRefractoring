@@ -8,17 +8,18 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider,$authProvider, API) {
     $authProvider.loginUrl = API.auth_url;
+    // $authProvider.httpInterceptor = false;
     $authProvider.tokenName = 'access_token';
 
-    // $stateProvider
-    //   // .state('home', {
-    //   //   url: '/',
-    //   //   templateUrl: 'app/main/main.html',
-    //   //   controller: 'MainController',
-    //   //   controllerAs: 'main'
-    //   // });
+    $stateProvider
+      .state('home', {
+        url: '/home',
+        templateUrl: 'app/shared/home/home.html',
+        controller: 'IndexController',
+        controllerAs: 'index'
+      });
 
-    // $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/home/universitiesLists');
   }
 
 })();

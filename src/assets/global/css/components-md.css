@@ -20,10 +20,10 @@ body {
  you can optionally include the following CSS and JavaScript to work around this problem until Microsoft issues a fix.
 */
 @-webkit-viewport {
-  width: device-width; }
+  width : device-width; }
 
 @-moz-viewport {
-  width: device-width; }
+  width : device-width; }
 
 @-ms-viewport {
   width: device-width; }

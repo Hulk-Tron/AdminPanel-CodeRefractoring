@@ -1,0 +1,101 @@
+
+<div class="row universitiesList">
+    <div class="col-md-12">
+        <!-- Begin: life time stats -->
+        <div class="portlet light portlet-fit portlet-datatable bordered have-top-space">
+            <div class="portlet-title">
+                <div class="caption" style="width:100%;">
+                    <div class="row">
+                        <h3 class="universitiesListHeading">Universities List</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label><i class="fa fa-search"></i> Search</label>
+                            <input type="text" ng-model="search" class="form-control" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-container table-responsive">
+                    <table class="table table-bordered table-hover table-checkable order-column">
+                        <thead>
+                        <tr role="row" class="heading">
+                            <th> ID</th>
+                            <th> Institute</th>
+                            <th> Location</th>
+                            <th> Contact</th>
+                            <th> Website</th>
+                            <th> Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-if="uniLists.universitiesList.length > 0"
+                            dir-paginate="university in uniLists.universitiesList | filter:search | itemsPerPage:10">
+                            <td>{{university.id}}</td>
+                            <td>
+                                <span class="td-logo"><img ng-src="{{university.institutE_LOGO}}" fall-back-src="http://www.resetyourbody.com/wp-content/uploads/COMPANY_LOGO/logo-default.png"/></span>
+                                {{university.institutE_NAME}}
+                                <br/>
+                                <small class="currncy-symbol">{{university.cmN_CURRENCY.curR_SYMBOL}}</small>
+                                <span class="golden-star"><i class="fa fa-star color-golden"> </i></span>
+                            </td>
+                            <td>
+                                {{university.maS_COUNTRY.countrY_NAME}} {{university.maS_STATE.statE_NAME}},
+                                {{university.maS_CITY.citY_NAME}}
+                            </td>
+                            <td>
+                                <a href="mailto:{{university.institutE_EMAIL}}">{{university.institutE_EMAIL}}</a><br/>
+                                <small>{{university.institutE_PHONE}}</small>
+                            </td>
+                            <td> {{university.institutE_WEB}}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a class="btn  dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li>
+                                            <a ui-sref="home.viewUniversityDetail({uni_id:university.id})">
+                                                <i class="fa fa-eye"></i> View Details
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a ui-sref="home.editUniversity({uni_id:university.id})">
+                                                <i class="fa fa-share"></i> Edit Details
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr ng-if="uniLists.show_loading">
+                            <td colspan="16" class="show_loading"><img style="" src="https://d13yacurqjgara.cloudfront.net/users/267/screenshots/1927432/loading.gif" alt=""></td>
+                        </tr>
+                        <tr ng-if="uniLists.universitiesList.length < 1 && !uniLists.show_loading">
+                            <td class="no-record" colspan="16">
+                                No Records found..
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <dir-pagination-controls ng-if="uniLists.universitiesList.length > 0" class="pagination"
+                                             max-size="10"
+                                             direction-links="true"
+                                             boundary-links="true">
+                    </dir-pagination-controls>
+                </div>
+            </div>
+        </div>
+        <!-- End: life time stats -->
+    </div>
+</div>
+<!-- END MAIN CONTENT -->
+
+
+
+
+
+

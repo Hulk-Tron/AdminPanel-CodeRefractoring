@@ -17,6 +17,7 @@ function authFactory($auth) {
 
                 // AUTH SUCESSFULL 
     function getAuth(adminCredentials) {
+        
         // AUTHENTICATION DATA OBJECT 
         var authenticationDataObject = {
             username: adminCredentials.username,

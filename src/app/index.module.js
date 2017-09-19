@@ -6,6 +6,9 @@
 
       //  AUTHENTICATION MODULE 
        'Authentication',
+       
+      //  MANAGE UNIVERSITIES 
+       'ManageUniversities',
 
        'satellizer',
        
@@ -16,6 +19,8 @@
        'ngTouch',
        
        'ngSanitize',
+
+       'ui-notification',
        
        'ngMessages',
        
@@ -27,7 +32,45 @@
        
        'ui.bootstrap',
        
-       'toastr'
-      
+       'toastr',
+
+       "ui.bootstrap.modal",
+
+      //  "oc.lazyLoad",
+
+       "ngSanitize",
+
+       'LocalStorageModule',
+
+       'ui.select',
+
+      //  'ui.tinymce',
+
+      //  'ngTagsInput',
+
+      //  'datatables',
+      //  ,
+
+      //  'datatables.bootstrap'
+
+
+      //  'ceibo.components.table.export',
+
+      //  'angularModalService',
+
+       'angularUtils.directives.dirPagination'
+
+      //  'xeditable',
+
+      //  "checklist-model",
+
+      //  'smart-table',
+
+      //  'ng-sweet-alert',
+
+      //  'textAngular',
+
+      //  'validation.match'
+       
       ]);
 })();

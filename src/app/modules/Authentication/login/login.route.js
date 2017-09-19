@@ -15,8 +15,7 @@
           controller: 'LoginController',
           controllerAs: 'login'
         });
-  
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/universitiesLists');
     }
   
   })();

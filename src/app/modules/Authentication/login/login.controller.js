@@ -4,21 +4,19 @@ angular
 .module('Authentication.login')
 .controller('LoginController', LoginController);
 
-LoginController.$inject = ['authFactory'];
+LoginController.$inject = ['authFactory','$state'];
 
-function LoginController(authFactory) {
+function LoginController(authFactory,$state) {
     var vm = this
     vm.loginAdmin = loginAdmin
     function loginAdmin(adminCredentials) {
-    alert()
         return authFactory.getAuth(adminCredentials)
         .then(function(data) {
-            vm.avengers = data;
-            return vm.avengers;
+            vm.loginSucessFull = data;
+            $state.go('home.universitiesLists')
+            return vm.loginSucessFull;
         });
-    // return getAvengers().then(function() {
-    //     logger.info('Activated Avengers View');
-    // });
+
 }
 
 // function getAvengers() {

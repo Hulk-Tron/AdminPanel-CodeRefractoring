@@ -1,0 +1,34 @@
+<!-- BEGIN HEADER -->
+<div data-ng-include="'app/shared/Layout/Header/header.html'" 
+class="page-header navbar navbar-fixed-top"></div>
+<!-- END HEADER -->
+
+
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container" >
+
+    <!-- BEGIN SIDEBAR -->
+    <div  data-ng-include="'app/shared/Layout/Sidebar/sidebar.html'"></div>
+    <!-- END SIDEBAR -->
+    
+    
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN ACTUAL CONTENT -->
+            <div ui-view class="fade-in-up"></div>
+            <!-- END ACTUAL CONTENT -->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+
+
+
+<!-- BEGIN FOOTER -->
+<div data-ng-include="'app/shared/Layout/Footer/footer.html'"
+     class="page-footer">
+</div>
+<!-- END FOOTER -->

@@ -1,0 +1,149 @@
+<!-- BEGIN PAGE HEADER-->
+<div style="clear:both;"></div>
+<div class="page-bar have-top-space">
+    <div class="page-toolbar">
+    </div>
+</div>
+<!-- END PAGE HEADER-->
+<!-- BEGIN MAIN CONTENT -->
+<div class="row">
+    <div class="col-md-12">
+        <!-- Begin: life time stats -->
+        <div class="portlet light portlet-fit portlet-datatable bordered have-top-space">
+            <div class="portlet-title nopaddlr">
+                <div class="col-xs-12 col-sm-4 manageuni-logotext" >
+                    <span><img src="{{uniDetails.instituteDetails.INSTITUTE_LOGO}}" class="img-responsive"></span>{{uniDetails.instituteDetails.INSTITUTE_NAME}}
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="btn-group pull-right">
+                        <a class="btn btn-default" href="javascript;;" >
+                            <i class="fa fa-pencil-square-o"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body manageuni-wrapper">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-3 first-pair inline-block">
+                                Currency:
+                            </div>
+                            <div class="col-xs-6 col-sm-9 second-pair inline-block">
+                                {{uniDetails.instituteDetails.CMN_CURRENCY.CURR_NAME}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-3 first-pair inline-block">
+                                Address Line 1:
+                            </div>
+                            <div class="col-xs-6 col-sm-9 second-pair inline-block">
+                                {{uniDetails.instituteDetails.INSTITUTE_ADDRESS_LINE1}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-3 first-pair inline-block">
+                                Address Line 2:
+                            </div>
+                            <div class="col-xs-6 col-sm-9 second-pair inline-block">
+                                {{uniDetails.instituteDetails.INSTITUTE_ADDRESS_LINE2}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-3 first-pair inline-block">
+                                Email:
+                            </div>
+                            <div class="col-xs-6 col-sm-9 second-pair inline-block">
+                                {{uniDetails.instituteDetails.INSTITUTE_EMAIL}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-3 first-pair inline-block">
+                                Website:
+                            </div>
+                            <div class="col-xs-6 col-sm-9 second-pair inline-block">
+                                <a href="{{uniDetails.instituteDetails.INSTITUTE_WEB}}">{{uniDetails.instituteDetails.INSTITUTE_WEB}}</a>
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-3 first-pair inline-block">
+                                Contact:
+                            </div>
+                            <div class="col-xs-6 col-sm-9 second-pair inline-block">
+                                {{uniDetails.instituteDetails.INSTITUTE_PHONE}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-4 first-pair inline-block">
+                                Country:
+                            </div>
+                            <div class="col-xs-6 col-sm-8 second-pair inline-block">
+                                {{uniDetails.instituteDetails.MAS_COUNTRY.COUNTRY_NAME}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-4 first-pair inline-block">
+                                Province:
+                            </div>
+                            <div class="col-xs-6 col-sm-8 second-pair inline-block">
+                                {{uniDetails.instituteDetails.MAS_STATE.STATE_NAME}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-4 first-pair inline-block">
+                                City:
+                            </div>
+                            <div class="col-xs-6 col-sm-8 second-pair inline-block">
+                                {{uniDetails.instituteDetails.MAS_CITY.CITY_NAME}}
+                            </div>
+                        </div>
+                        <div class="row text-paired manageuni-main">
+                            <div class="col-xs-6 col-sm-4 first-pair inline-block">
+                                Postal Code:
+                            </div>
+                            <div class="col-xs-6 col-sm-8 second-pair inline-block">
+                                {{uniDetails.instituteDetails.INSTITUTE_POSTAL_CODE}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row payment-methods">
+                    <div class="col-xs-12">
+                        <h3>
+                            Payment Methods
+                        </h3>
+                    </div>
+                    <div class="col-xs-12 paymethod-tags-wrapper text-center">
+                        <div class="col-sm-3 col-md-2" ng-repeat="singlePayMethod in institutePayMethods">
+                            <div class="insertedPayWrapper">
+                                {{uniDetails.singlePayMethod.CMN_PAYMENT_METHOD.METHOD_NAME}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row country-payment-methods">
+                    <div class="col-xs-12">
+                        <h3>
+                            Country Payments Method
+                        </h3>
+                    </div>
+                    <div class="col-xs-12 country-row text-center" ng-repeat="singleCountry in instituteCountryPayMethod">
+                        <div class="col-sm-2 col-md-2 text-uppercase text-left">
+                            {{uniDetails.singleCountry.country.countrY_NAME}}
+                        </div>
+                        <div class="col-sm-3 col-md-2" ng-repeat="singleCntryMethod in singleCountry.paymentMethod">
+                            <div class="insertedPayWrapper">
+                                {{uniDetails.singleCntryMethod.methoD_NAME}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- End: life time stats -->
+    </div>
+</div>
+<!-- END MAIN CONTENT -->

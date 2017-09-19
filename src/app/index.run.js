@@ -7,6 +7,7 @@
 
   /** @ngInject */
   function runBlock($rootScope,$auth,$state) {
+    $rootScope.settings = {}
     $rootScope.$state = $state; // state to be accessed from view
     /**
      * This checks if the state is authenticated.
@@ -21,13 +22,14 @@
                 requiredLogin = true;
             // if yes and if this user is not logged in, redirect him to login page
             if (requiredLogin && !$auth.isAuthenticated()) {
+                $rootScope.settings.is_authenticated = false
                 event.preventDefault();
                 $state.go('login');
             } else if (!requiredLogin && $auth.isAuthenticated()) {
-              alert()
                 if (toState.name == "login") {
+                    $rootScope.settings.is_authenticated = true
                     event.preventDefault();
-                    $state.go('list-university');
+                    $state.go('universitiesLists');
                 }
             }
         });

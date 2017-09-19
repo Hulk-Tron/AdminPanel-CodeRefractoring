@@ -1,0 +1,383 @@
+<div>
+    <div class="page-bar" style="margin-bottom: 20px;">
+        <ul class="page-breadcrumb">
+            <li>
+                <a>Home</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>Edit University</span>
+            </li>
+        </ul>
+    </div>
+    <!-- END PAGE BAR -->
+
+    <!-- END PAGE HEADER-->
+    <div class="row">
+        <div class="col-md-12 ">
+            <!-- BEGIN SAMPLE FORM PORTLET-->
+            <div class="portlet light bordered nopadding">
+                <!--MANAGE UNIVERSITY TABBING BEGINS -->
+                <div class="portlet">
+                    <div class="portlet-title tabbable-line">
+                        <ul class="nav nav-tabs ManageUni-Tab-Head col-sm-12">
+                            <!--EDIT TAB BUTTON BEGINS-->
+                            <li class="active">
+                                <a data-target="#EditInstituteTab" data-toggle="tab">Edit Insititute </a>
+                            </li>
+                            <!--EDIT TAB BUTTON ENDS-->
+                            <!--PAYMENTS METHOD BUTTON BEGINS-->
+                            <li>
+                                <a  data-target="#PaymentMethodTab" data-toggle="tab"
+                                   ng-click="PaymentMethodsClick()"> Payments Method </a>
+                            </li>
+                            <!--PAYMENTS METHOD BUTTON END-->
+                            <!--COUNTRY PAYMENT BUTTON BEGINS-->
+                            <li ng-show="isMethodSelected">
+                                <a  id="CountryPaymentMethod" data-target="#CountryPayTab" data-toggle="tab">
+                                    Country Payment Method </a>
+                            </li>
+                            <!--COUNTRY PAYMENT BUTTON BEGINS-->
+                            <!--COUNTRY PAYMENT METHOD WHEN NO METHOD SELECTED BUTTON BEGINS-->
+                            <li ng-click="countryPaymentClick()" ng-hide="isMethodSelected">
+                                <a > Country Payment Method </a>
+                            </li>
+                            <!--COUNTRY PAYMENT METHOD WHEN NO METHOD SELECTED BUTTON ENDS-->
+                            <!--CLOSE BUTTON BEGINS-->
+                            <!--CLOSE BUTTON END-->
+                        </ul>
+                        <!--asdasdasd@live.com-->
+                    </div>
+                    <div class="portlet-body">
+                        <div class="error-status">
+                            <p class="text-right" ng-bind="errorMsg"></p>
+                        </div>
+                        <!--ALL TABS / DIV BEGIN-->
+                        <div class="tab-content Tabs-Wrappper">
+                            <!--EDIT INSTITUTE DIV BEGIN-->
+                            <div class="tab-pane active" id="EditInstituteTab">
+                                <div class="" data-always-visible="1" data-rail-visible1="0"
+                                     data-handle-color="#D7DCE2">
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <!-- BEGIN SAMPLE FORM PORTLET-->
+                                            <div class="portlet light bordered">
+                                                <div class="portlet-title">
+                                                    <div class="caption font-dark">
+                                                        <i class="fa fa-bank font-dark"></i>
+                                                        <span class="caption-subject bold uppercase"> Edit University</span>
+                                                    </div>
+                                                </div>
+                                                <div class="portlet-body form">
+                                                    <div ng-if="!show_loading" class="row">
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Enter Institute Name</label>
+                                                                <input class="form-control spinner"
+                                                                       placeholder="Enter Institute Name" type="text"
+                                                                       ng-model="uni.INSTITUTE_NAME">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Address Line 1</label>
+                                                                <input class="form-control spinner"
+                                                                       placeholder="Enter Address" type="text"
+                                                                       ng-model="uni.INSTITUTE_ADDRESS_LINE1">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Address Line 2</label>
+                                                                <input class="form-control spinner"
+                                                                       placeholder="Enter Address" type="text"
+                                                                       ng-model="uni.INSTITUTE_ADDRESS_LINE2">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+                                                            <div class="form-group">
+                                                                <label>Select Country</label>
+
+                                                                <ui-select ng-model="uni.INSTITUTE_COUNTRY_ID"
+                                                                           class="form-control spinner"
+                                                                           title="Select Country"
+                                                                           on-select="getStates($item, $model)"
+                                                                           style="border:none;padding:0px;margin:0px;">
+                                                                    <ui-select-match
+                                                                            placeholder="Please Select the Country for this institute">
+                                                                        {{$select.selected.countrY_NAME}}
+                                                                        {{$select.selected.iso}}
+                                                                    </ui-select-match>
+                                                                    <ui-select-choices
+                                                                            repeat="country.id as country in countries | propsFilter: {countrY_NAME: $select.search, iso: $select.search}">
+                                                                        <div ng-bind-html="country.countrY_NAME  | highlight: $select.search"></div>
+                                                                        <small>
+                                             <span
+                                                     ng-bind-html="''+country.iso | highlight: $select.search"></span>
+                                                                        </small>
+                                                                    </ui-select-choices>
+                                                                </ui-select>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Select Province</label>
+                                                                <ui-select ng-model="uni.INSTITUTE_STATE_ID"
+                                                                           class="form-control spinner"
+                                                                           title="Select Sate"
+                                                                           on-select="getCities($item, $model)"
+                                                                           style="border:none;padding:0px;margin:0px;">
+                                                                    <ui-select-match
+                                                                            placeholder="Please Select state or province">
+                                                                        {{$select.selected.statE_NAME}}
+                                                                    </ui-select-match>
+                                                                    <ui-select-choices
+                                                                            repeat="state_.id as state_ in states_ | propsFilter: {statE_NAME: $select.search}">
+                                                                        <div ng-bind-html="state_.statE_NAME  | highlight: $select.search"></div>
+                                                                        <!--<small>-->
+                                                                        <!--<span-->
+                                                                        <!--ng-bind-html="''+country.ISO | highlight: $select.search"></span>-->
+                                                                        <!--</small>-->
+                                                                    </ui-select-choices>
+                                                                </ui-select>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+                                                            <div class="form-group">
+                                                                <label>Select City</label>
+
+                                                                <ui-select ng-model="uni.INSTITUTE_CITY_ID"
+                                                                           class="form-control spinner"
+                                                                           title="Select City"
+                                                                           style="border:none;padding:0px;margin:0px;">
+                                                                    <ui-select-match placeholder="Please Select City">
+                                                                        {{$select.selected.citY_NAME}}
+                                                                    </ui-select-match>
+                                                                    <ui-select-choices
+                                                                            repeat="city.id as city in cities | propsFilter: {citY_NAME: $select.search}">
+                                                                        <div ng-bind-html="city.citY_NAME  | highlight: $select.search"></div>
+                                                                    </ui-select-choices>
+                                                                </ui-select>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Postal Code</label>
+                                                                <input class="form-control spinner" placeholder="74400"
+                                                                       type="text"
+                                                                       ng-model="uni.INSTITUTE_POSTAL_CODE">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Website</label>
+                                                                <input class="form-control spinner"
+                                                                       placeholder="http://www.example.com" type="text"
+                                                                       ng-model="uni.INSTITUTE_WEB">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Contact #</label>
+                                                                <input class="form-control spinner"
+                                                                       placeholder="+92090078601" type="text"
+                                                                       ng-model="uni.INSTITUTE_PHONE">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-6 col-xs-12">
+
+                                                            <div class="form-group">
+                                                                <label>Select Logo</label>
+                                                                <input class="form-control spinner" type="file"
+                                                                       id="logo_file">
+                                                                <input type="hidden" ng-model="uni.INSTITUTE_LOGO"
+                                                                       id="logo_url">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="pull-right">
+                                                                <a type="button" class="btn btn-primary"
+                                                                   ng-click="create_uni(uni)">Update</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div ng-if="show_loading" class="row">
+                                                        <div class="col-md-12" style="text-align:center">
+                                                            <img style="text-align:center;width:300px"
+                                                                 src="https://d13yacurqjgara.cloudfront.net/users/267/screenshots/1927432/loading.gif"
+                                                                 alt="">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- END SAMPLE FORM PORTLET-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--EDIT INSTITUTE DIV END-->
+                            <!--PAYMENT METHOD DIV BEGIN-->
+                            <!--PAYMENT METHOD DIV BEGIN-->
+                            <div class="tab-pane" id="PaymentMethodTab">
+                                <div data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                    <div class="row University-PaymentMethods">
+                                        <div class="col-sm-4 col-md-3 ManagePayTitle">
+                                            Manage Payment Methods
+                                        </div>
+                                        <div class="col-sm-8 col-md-9 ManagePayCheckbox">
+                                            <ul class="university-paymenttypes list-inline">
+                                                <!--AVAILABLE PAYMENT METHOD BEGIN-->
+                                                <li ng-repeat="singlePayMethod in AllPaymentMethods">
+                                                    <div class="paytype-wrapper">
+                                                        <form class="checkbox">
+                                                            <input id="{{singlePayMethod.id}}" type="checkbox"
+                                                                   ng-model="wire" name="check" value="check1"
+                                                                   ng-click="AddPaymentMethod(singlePayMethod)">
+                                                            <label for="{{singlePayMethod.id}}">{{singlePayMethod.methoD_NAME}}</label>
+                                                        </form>
+
+                                                    </div>
+                                                </li>
+                                                <!--AVAILABLE PAYMENT METHOD END-->
+                                                <!--LOADER BEGINS -->
+                                                <li ng-show="showLoader">
+                                                    <img src="https://d13yacurqjgara.cloudfront.net/users/267/screenshots/1927432/loading.gif"
+                                                         class="img-responsive center-block"/>
+                                                </li>
+                                                <!--LOADER ENDS-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="manageuni-single-footer">
+                                    <button class="btn btn-primary" ng-click="sendPaymentMethods()">SAVE</button>
+                                </div>
+                            </div>
+                            <!--PAYMENT METHOD DIV END-->
+                            <!--COUNTRY PAYMENT DIV BEGIN-->
+                            <div class="tab-pane" id="CountryPayTab">
+                                <div data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+                                    <div class="row">
+                                        <div class="col-sm-2 nopaddright">
+                                            <!--SELECT COUNTRY FROM DROPDOWN BEGIN-->
+                                            <select class="form-control" ui-select2 ng-model="countriesModel"
+                                                    ng-click="countryId = countriesModel"
+                                                    data-placeholder="Select Country">
+                                                <option value=""></option>
+                                                <option ng-repeat="x in availableCountries" value="{{x.ID}}">
+                                                    {{x.countrY_NAME}}
+                                                </option>
+                                                <option ng-show="isLoading" value="Loading...">
+                                                    Loading...
+                                                </option>
+                                            </select>
+                                            <!--SELECT COUNTRY FROM DROPDOWN END-->
+                                        </div>
+                                        <div class="col-sm-10 nopaddleft">
+                                            <div class="university-selectMethod">
+                                                <div class="selectMethod-header">
+                                                    <ul class="list-inline">
+                                                        <li ng-repeat="x in tags">
+                                                            <div class="insertedPayWrapper">
+                                                                {{x.methoD_NAME}} <span
+                                                                    ng-click="revertPayMethod(x)">&times;</span>
+                                                            </div>
+                                                        </li>
+                                                        <!--SELECTION BOX BEGIN-->
+                                                        <li ng-show="payMethodIsEmpty" class="Paymethod-SelectBox">
+                                                            <select class="form-control" ng-model="select2"
+                                                                    ng-change="onMethodChange(select2)">
+                                                                <option ng-repeat="x in newCntryPayAdded" value="{{x}}">
+                                                                    {{x.methoD_NAME}}
+                                                                </option>
+                                                            </select>
+                                                            <!--SELECT BOX WITH SEARCH BAR BEGIN-->
+                                                            <!--<select class="form-control" ui-select2 ng-model="select2" data-placeholder="Select Country" ng-change="onMethodChange(select2)">
+                                                                <option ng-repeat="x in PayMethodSelected" value="{{x}}" >
+                                                                    {{x}}
+                                                                </option>
+                                                            </select>-->
+                                                            <!--SELECT BOX WITH SEARCH BAR END-->
+                                                        </li>
+                                                        <!--SELECTION BOX END-->
+                                                    </ul>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="selectMethod-body">
+                                                    <!--&lt;!&ndash;TAG DESCRIPTION PANEL BEGIN&ndash;&gt;-->
+                                                    <!--<form method="post">-->
+                                                    <!--<textarea ui-tinymce ng-model="tinymceModel"></textarea>-->
+                                                    <!--</form>-->
+                                                    <!--TAG DESCRIPTION PANEL END-->
+                                                    <div class="university-addCountrybtn">
+                                                        <button ng-click="AddAnotherCountry()">ADD ANOTHER COUNTRY
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="row" ng-repeat="singleCountry in allInsertedCountry"
+                                         style="margin-top:5px;">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-2 nopaddright addothercntr-head">
+                                                {{singleCountry.country.countrY_NAME}}
+                                            </div>
+                                            <div class="col-sm-10 nopaddleft addothercntr-body">
+                                                <div class="university-selectMethod">
+                                                    <div class="selectMethod-header">
+                                                        <ul class="list-inline">
+                                                            <li ng-repeat="paymethod in singleCountry.paymentMethod">
+                                                                <div class="insertedPayWrapper">
+                                                                    {{paymethod.methoD_NAME}}
+                                                                </div>
+                                                            </li>
+                                                            <li class="pull-right">
+                                                                <div class="insertedPayWrapper">
+                                                                    <span ng-click="deleteCountry(singleCountry.country.id,singleCountry.instituteID)">&times;</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--COUNTRY PAYMENT DIV END-->
+                        </div>
+                        <!--ALL TABS / DIV END-->
+                    </div>
+                </div>
+                <!--MANAGE UNIVERSITY TABBING ENDS-->
+                <div class="save-status">
+                    <p class="text-right" ng-show="isSaved">Data Saved Successfully. &nbsp;&nbsp;</p>
+                </div>
+            </div>
+            <!-- END SAMPLE FORM PORTLET-->
+        </div>
+    </div>
+</div>
